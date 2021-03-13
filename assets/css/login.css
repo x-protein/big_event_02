@@ -32,3 +32,16 @@ html {
     height: 60px;
     background: url('/assets/images/login_title.png') no-repeat center;
 }
+
+/* 2.登录与注册页面 的样式 */
+.layui-form {
+    padding: 0 30px;
+}
+
+/* 3.a链接 */
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*  */
