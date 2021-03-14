@@ -74,7 +74,7 @@ $(function () {
     $('#form_reg').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
-            url: "http://api-breakingnews-web.itheima.net/api/reguser",
+            url: "/api/reguser",
             type: "POST",
             data: {
                 //用户名
@@ -105,7 +105,7 @@ $(function () {
         // 阻止表单的默认事件
         e.preventDefault();
         $.ajax({
-            url: "http://api-breakingnews-web.itheima.net/api/login",
+            url: "/api/login",
             type: "POST",
             data: {
                 //用户名
