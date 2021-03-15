@@ -20,7 +20,7 @@ function getUserInof() {
         // },
         data: {},
         success: (res) => {
-            console.log(res);
+            // console.log(res);
             // console.log(layui.layer.msg(res.message));
             // console.log(res.data);
             if (res.status !== 0) {
@@ -32,11 +32,11 @@ function getUserInof() {
 };
 
 function renderAvatar(user) {
-    console.log(user);
+    // console.log(user);
     let name = user.nickname || user.username;
-    console.log(name);
+    // console.log(name);
     $('#welcome').html(name)
-    $('#welcome1').html(name)
+    // $('#welcome1').html(name)
 
     if (user.user_pic !== null) {
         // 有头像
