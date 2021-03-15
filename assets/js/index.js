@@ -1,14 +1,23 @@
 $(function () {
     getUserInof();
+
+    $('#btnLogout').on('click', function () {
+        layer.confirm('是否确定退出吗?', { icon: 3, title: '提示' }, function (index) {
+            //do something
+            localStorage.removeItem('token');
+            location.href = '/login.html';
+            layer.close(index);
+        });
+    })
 })
 
 function getUserInof() {
     $.ajax({
         url: "/my/userinfo",
         type: "GET",
-        headers: {
-            Authorization: localStorage.getItem('token') || ''
-        },
+        // headers: {
+        //     Authorization: localStorage.getItem('token') || ''
+        // },
         data: {},
         success: (res) => {
             console.log(res);
@@ -24,7 +33,6 @@ function getUserInof() {
 
 function renderAvatar(user) {
     console.log(user);
-
     let name = user.nickname || user.username;
     console.log(name);
     $('#welcome').html(name)
@@ -40,5 +48,4 @@ function renderAvatar(user) {
         let text = name[0].toUpperCase();
         $('.text-avatat').show().html(text);
     }
-
 }
