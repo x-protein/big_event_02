@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    padding: 15px;
+    background-color: rgba(204, 204, 204, 0.707);
+}
+.layui-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
